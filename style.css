@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+  background-color: #6600cc;
+  color: white;
+  padding: 18px;
+  font-weight: normal;
+}
+
+.container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  width: 95%;
+  height: 40px;
+  outline: none;
+  box-shadow: 0px 0px 5px rgb(174, 174, 231);
+  border: 2px solid gainsboro;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+input[type="text"]:focus {
+  border: 2px solid rgb(174, 174, 231);
+}
+
+button {
+  height: 30px;
+  width: 80px;
+  background-color: #6600cc;
+  box-shadow: 1px 1px 10px grey;
+  color: white;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+#tasks {
+  margin-top: 50px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+#doneTasks {
+  position: relative;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+#tasks div {
+  position: relative;
+  padding: 10px;
+  font-size: 17px;
+  border: 2px solid gainsboro;
+}
+
+#doneTasks div {
+  position: relative;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+}
+
+#doneTasks #line {
+  position: absolute;
+  padding: 0;
+  border: 0.1px solid rgb(17, 13, 13);
+  width: 90%;
+  top: 50%;
+  left: 10px;
+}
+
+i {
+  float: right;
+  font-size: 17px;
+  color: rgb(83, 81, 81);
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .container {
+    width: 400px;
+  }
+}
