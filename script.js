@@ -16,6 +16,14 @@ function addTask() {
     //Removes a task after clicking on the TrashCan
     trash.addEventListener("click", function () {
       this.parentElement.remove();
+
+      //Adds line to separate Done tasks from To Do tasks
+      if (
+        done.querySelector("div") == null ||
+        tasks.querySelector("div") == null
+      )
+        done.style.borderTop = "0px solid gainsboro";
+      else done.style.borderTop = "1px solid gainsboro";
     });
 
     task.textContent = input.value;
@@ -26,11 +34,16 @@ function addTask() {
 
     //Moves the finished tasks and puts a line through them
     task.addEventListener("click", function () {
-      if (taskBox.querySelector("#line") == null) {
-        let line = document.createElement("div");
-        line.setAttribute("id", "line");
-        taskBox.append(line);
+      if (taskBox.querySelector(".fa-check") == null) {
+        let check = document.createElement("i");
+        check.classList = "fa-solid fa-check";
+        taskBox.append(check);
         done.append(taskBox);
+
+        //Adds line to separate Done tasks from To Do tasks
+        if (tasks.querySelector("div") == null)
+          done.style.borderTop = "0px solid gainsboro";
+        else done.style.borderTop = "1px solid gainsboro";
       }
     });
   }
