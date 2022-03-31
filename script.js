@@ -32,7 +32,7 @@ function addTask() {
     tasks.append(taskBox);
     input.value = "";
 
-    //Moves the finished tasks and puts a line through them
+    //Moves the finished tasks to the Done place and puts a check mark before them 
     task.addEventListener("click", function () {
       if (taskBox.querySelector(".fa-check") == null) {
         let check = document.createElement("i");
