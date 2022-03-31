@@ -77,23 +77,21 @@ button {
   position: relative;
   padding: 10px;
   font-size: 17px;
-  border: 2px solid gainsboro;
 }
 
 #doneTasks div {
   position: relative;
   padding: 10px;
   font-size: 17px;
-  border: 1px solid grey;
 }
 
-#doneTasks #line {
+#doneTasks div i.fa-check {
+  font-size: 17px;
+  color: #6600cc;
   position: absolute;
-  padding: 0;
-  border: 0.1px solid rgb(17, 13, 13);
-  width: 90%;
-  top: 50%;
-  left: 10px;
+  left: -13px;
+  top: 11.5px;
+  border-radius: 50%;
 }
 
 i {
@@ -105,6 +103,6 @@ i {
 
 @media (max-width: 650px) {
   .container {
-    width: 400px;
+    width: 60%;
   }
 }
