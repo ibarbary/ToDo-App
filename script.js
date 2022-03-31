@@ -32,7 +32,7 @@ function addTask() {
     tasks.append(taskBox);
     input.value = "";
 
-    //Moves the finished tasks to the Done place and puts a check mark before them 
+    //Moves the finished tasks from our ToDo tasks and places a check mark below the finished tasks
     task.addEventListener("click", function () {
       if (taskBox.querySelector(".fa-check") == null) {
         let check = document.createElement("i");
@@ -46,5 +46,9 @@ function addTask() {
         else done.style.borderTop = "1px solid gainsboro";
       }
     });
+
+    if (done.querySelector("div") == null || tasks.querySelector("div") == null)
+      done.style.borderTop = "0px solid gainsboro";
+    else done.style.borderTop = "1px solid gainsboro";
   }
 }
